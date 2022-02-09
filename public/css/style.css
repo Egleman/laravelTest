@@ -16,3 +16,13 @@ nav {
 .card-img, .card-author {
     margin-bottom: 10px;
 }
+.card-img_max {
+    height: 500px;
+}
+
+.card-btn {
+    display: flex;
+}
+.card-btn a {
+    margin-right: 10px;
+}
