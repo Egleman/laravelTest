@@ -10,7 +10,7 @@
                 <textarea name="descr" id="" rows="10" class="form-control" required></textarea>
             </div>
             <div class="form-group">
-                <input type="file">
+                <input type="file" name="img">
             </div>
             <input type="submit" value="Создать пост" class="btn btn-outline-success">
         </form>
