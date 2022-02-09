@@ -15,12 +15,14 @@
                     <div class="card-date">Пост создан: {{ $post->created_at->diffForHumans() }}</div>
                     <div class="card-btn">
                         <a href="{{ route('post.index') }}" class="btn btn-outline-primary">На главную</a>
+                        @auth
                         <a href="{{ route('post.edit', ['id' => $post->post_id]) }}" class="btn btn-outline-success">редактировать</a>
                         <form action="{{ route('post.destroy', ['id' => $post->post_id]) }}" method="POST" onsubmit="if (confirm('точно удалить?')) {return true} else {return false}">
                             @csrf
                             @method('DELETE')
                             <input type="submit" class="btn btn-outline-danger" value="Удалить">
                         </form>
+                        @endauth
                     </div>
                 </div>
             </div>
